@@ -1,3 +1,10 @@
-#:include farmersmapview.kv
+#:include tacoview.kv
 
-TacoView:
+BoxLayout:
+    orientation: 'vertical'
+    MDToolbar:
+        title: 'Taco & Burrito Restaurant Finder'
+        right_action_items: [['magnify',lambda x:app.search_menu.open()]]
+        md_bg_color: app.theme_cls.primary_color
+    TacoView:
+        id: mapview
